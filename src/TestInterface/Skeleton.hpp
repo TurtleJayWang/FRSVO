@@ -1,6 +1,5 @@
 #pragma once
 
-#include <SDL2/SDL.h>
 #include <iostream>
 #include <string>
 
@@ -18,7 +17,7 @@ public:
 
 protected:
 
-    void render();
+    virtual void render();
 
 private:
 
