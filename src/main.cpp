@@ -1,4 +1,4 @@
-#include "Render/Voxel.hpp"
+#include "Render/Voxel/Voxel.hpp"
 
 int main()
 {
