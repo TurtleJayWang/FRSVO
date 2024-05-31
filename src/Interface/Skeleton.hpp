@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <string>
+#include <SDL2/SDL.h>
 
 class TestApp
 {
@@ -11,7 +12,7 @@ public:
 
     void setOpenGL(bool flag);
 
-    static TestApp* createDefaultSize(const char* title);
+    static TestApp* createTestSize(const char* title);
 
     static TestApp* create(const char* title, int w, int h);
 
