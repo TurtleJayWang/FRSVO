@@ -1,6 +1,7 @@
 #pragma once
 
 #include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
 #include <mem.h>
 #include "KernelManager.hpp"
 
@@ -28,15 +29,15 @@ protected:
 
 };
 
-class EmptyRenderer : public Renderer
+class TestRenderer : public Renderer
 {
 public:
 
-    EmptyRenderer(int w, int h) : Renderer(w, h) {  }
+    TestRenderer(int w, int h) : Renderer(w, h) {  }
 
 protected:
 
-    virtual void render() {}
+    virtual void render();
 
 };
 

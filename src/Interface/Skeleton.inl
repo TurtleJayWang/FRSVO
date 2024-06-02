@@ -1,5 +1,6 @@
 #include "Skeleton.hpp"
 #include <bitset>
+#include <SDL2/SDL_image.h>
 
 bool TestApp::haveCreatedOneInstance = false;
 
@@ -43,12 +44,24 @@ TestApp* TestApp::create(const char* title, int w, int h, int flags)
 
     app->format = app->windowSurface->format;
     std::cout << "Format: " << app->format->format << std::endl;
-    std::cout << "Bytes Per pixel: " << app->format->BytesPerPixel << std::endl;
+    std::cout << "Bytes Per pixel: " << int(app->format->BytesPerPixel) << std::endl;
     std::cout << "RGBmask: " << std::hex
         << app->format->Rmask << " " 
         << app->format->Gmask << " " 
         << app->format->Bmask << " "
         << app->format->Amask << std::endl;
+
+    std::cout << "RGBshift: " << std::dec
+        << int(app->format->Rshift) << " " 
+        << int(app->format->Gshift) << " " 
+        << int(app->format->Bshift) << " "
+        << int(app->format->Ashift) << std::endl;
+
+    std::cout << "RGBloss: " << std::dec
+        << int(app->format->Rloss) << " " 
+        << int(app->format->Gloss) << " " 
+        << int(app->format->Bloss) << " "
+        << int(app->format->Aloss) << std::endl;
 
     return app;
 }
